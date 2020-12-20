@@ -32,10 +32,10 @@
                         <input type="text" name="item_name" x-bind:id="index + 1" x-model="item.name">
 
                         <label for="item_price">Preço</label>
-                        <input type="text" name="item_price" x-bind:id="index + 1" x-model="item.price">
+                        <input type="text" inputmode="decimal" name="item_price" x-bind:id="index + 1" x-model="item.price">
 
                         <label for="item_ammount">Quantidade</label>
-                        <input type="text" name="item_ammount" class="ammount" x-bind:id="index + 1"
+                        <input type="text" inputmode="numeric" pattern="[0-9]*" name="item_ammount" class="ammount" x-bind:id="index + 1"
                             x-model="item.ammount">
                         <span>Item total <span x-text="item.sum()"></span></span>
                     </form>
